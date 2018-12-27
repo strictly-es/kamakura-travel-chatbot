@@ -1,6 +1,6 @@
 "use strict";
 const dialogflow = require("dialogflow");
-const structjson = require("./struction");
+const structjson = require("./structjson.js");
 const config = require("../config/keys");
 
 const projectID = config.googleProjectID;
@@ -47,13 +47,12 @@ module.exports = {
       queryInput: {
         event: {
           name: event,
-          parameters: structjson.jsonToStructProto(parameters),
-          languageCode: config.dialogFlowSessionLanguageCode
+          parameters: structjson.jsonToStructProto(parameters), //Dialogflow's v2 API uses gRPC. You'll need a jsonToStructProto method to convert your JavaScript object to a proto struct.
+          languageCode: languageCode
         }
       }
     };
 
-    // Send request and log result
     let responses = await sessionClient.detectIntent(request);
     responses = await self.handleAction(responses);
     return responses;
