@@ -23,7 +23,7 @@ module.exports = {
       session: sessionPath,
       queryInput: {
         text: {
-          text: text,
+          text: "hi",
           languageCode: config.dialogFlowSessionLanguageCode
         }
       },
