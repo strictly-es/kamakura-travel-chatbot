@@ -162,7 +162,8 @@ export default class Chatbot extends Component {
       <div
         style={{
           height: 500,
-          width: "auto"
+          width: "auto",
+          overflow: "auto"
           //position: "center",
           //bottom: 0,
           //right: 0

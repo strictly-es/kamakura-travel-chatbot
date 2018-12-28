@@ -3,7 +3,9 @@ import React from "react";
 const Landing = () => (
   <div style={{ textAlign: "center" }}>
     <h1>Ask me about Kamakura!</h1>
-    with a help of the chatbot
+    <h4>
+      with a help of the chatbot <i class="fas fa-robot" />
+    </h4>
   </div>
 );
 
