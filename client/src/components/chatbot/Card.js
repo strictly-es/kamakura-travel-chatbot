@@ -2,17 +2,20 @@ import React from "react";
 
 const Card = props => {
   return (
-    <div style={{ width: 270, paddingRight: 30, with: 270 }}>
+    <div style={{ height: 270, paddingRight: 30, width: 270, float: "left" }}>
       <div className="card">
-        <div className="card-image" style={{ width: 240 }}>
+        {/* <div className="card-image" style={{ width: 240 }}>
           <img
             alt={props.payload.fields.header.stringValue}
             src={props.payload.fields.image.stringValue}
           />
-          <span className="card-title">
+        </div> */}
+        <span className="card-title">
+          {/* {props.payload.fields.header.stringValue} */}
+          <a target="_blank" href={props.payload.fields.url.stringValue}>
             {props.payload.fields.header.stringValue}
-          </span>
-        </div>
+          </a>
+        </span>
         <div className="card-content">
           {props.payload.fields.discription.stringValue}
           <p>
@@ -21,7 +24,7 @@ const Card = props => {
         </div>
         <div className="card-action">
           <a target="_blank" href={props.payload.fields.link.stringValue}>
-            GET NOW
+            HOW TO GET THERE
           </a>
         </div>
       </div>

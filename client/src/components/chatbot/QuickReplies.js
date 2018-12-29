@@ -31,9 +31,12 @@ class QuickReplies extends Component {
         <div className="card-panel grey lighten-5 z-depth-1">
           <div className="row valign-wrapper">
             <div className="col s2">
-              <a className="btn-floating btn-large waves-effect waves-light red">
+              {/* <a className="btn-floating btn-large waves-effect waves-light red">
                 {this.props.speaks}
-              </a>
+              </a> */}
+              <h4>
+                <i class="fas fa-robot" />
+              </h4>
             </div>
             <div id="quick-replies" className="col s10">
               {this.props.text && <p>{this.props.text.stringValue}</p>}

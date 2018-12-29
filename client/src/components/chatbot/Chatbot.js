@@ -96,11 +96,14 @@ export default class Chatbot extends Component {
           <div className="card-panel grey lighten-5 z-depth-1">
             <div style={{ overflow: "hidden" }}>
               <div className="col s2">
-                <a className="btn-floating btn-large waves-effect waves-light red">
+                {/* <a className="btn-floating btn-large waves-effect waves-light red">
                   {message.speaks}
-                </a>
+                </a> */}
+                <h4>
+                  <i class="fas fa-robot" />
+                </h4>
               </div>
-              <div style={{ overflow: "auto", overflowY: "scroll" }}>
+              <div style={{ overflow: "auto", overflowX: "scroll" }}>
                 <div
                   style={{
                     height: 300,
@@ -159,44 +162,47 @@ export default class Chatbot extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          height: 500,
-          width: "auto",
-          overflow: "auto"
-          //position: "center",
-          //bottom: 0,
-          //right: 0
-        }}
-      >
-        <div>
-          <h2>ChatBot</h2>
-        </div>
+      <div>
         <div
-          id="chatbot"
-          style={{ height: "388", width: "100%", overflow: "auto" }}
+          style={{
+            height: 500,
+            width: "auto",
+            overflow: "auto"
+            //position: "center",
+            //bottom: 0,
+            //right: 0
+          }}
         >
-          {this.renderMessages(this.state.messages)}
+          <div>
+            <h2>ChatBot</h2>
+          </div>
           <div
-            style={{ float: "left", clear: "both" }}
-            ref={el => {
-              this.messagesEnd = el;
-            }}
-          />
-        </div>
-        <div className="col s12">
-          <input
-            style={{
-              margin: 0,
-              paddingLeft: "1%",
-              paddingRight: "1%",
-              width: "98%"
-            }}
-            type="text"
-            ref={input => (this.talkInput = input)}
-            onKeyPress={e => this._handleInputKeyPress(e)}
-            placeholder="type a message"
-          />
+            id="chatbot"
+            style={{ height: "388", width: "100%", overflow: "auto" }}
+          >
+            {this.renderMessages(this.state.messages)}
+            <div
+              style={{ float: "left", clear: "both" }}
+              ref={el => {
+                this.messagesEnd = el;
+              }}
+            />
+          </div>
+          <div className="col s12">
+            <input
+              style={{
+                margin: 0,
+                paddingLeft: "1%",
+                paddingRight: "1%",
+                width: "98%",
+                marginBottom: 30
+              }}
+              type="text"
+              ref={input => (this.talkInput = input)}
+              onKeyPress={e => this._handleInputKeyPress(e)}
+              placeholder="type a message"
+            />
+          </div>
         </div>
       </div>
     );
