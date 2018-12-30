@@ -88,9 +88,11 @@ export default class Chatbot extends Component {
       return (
         <Message key={i} speaks={message.speaks} text={message.msg.text.text} />
       );
-    } else if (message.msg && message.msg.payload.fields.cards) {
-      //message.msg.payload.fields.cards.listValue.values
-
+    } else if (
+      message.msg &&
+      message.msg.payload &&
+      message.msg.payload.fields.cards
+    ) {
       return (
         <div key={i}>
           <div className="card-panel grey lighten-5 z-depth-1">

@@ -9,7 +9,7 @@ const Message = props => {
             <div className="col s2">
               {/* <a className="btn-floating btn-large waves-effect waves-light red"> */}
               <h4>
-                <i class="fas fa-robot" />
+                <i className="fas fa-robot" />
               </h4>
               {/* {props.speaks} */}
               {/* </a> */}
@@ -22,8 +22,7 @@ const Message = props => {
             <div className="col s2">
               {/* <a className="btn-floating btn-large waves-effect waves-light red"> */}
               <h4>
-                <i class="fas fa-smile" />
-                {/* {props.speaks} */}
+                <i className="far fa-smile" /> {/* {props.speaks} */}
               </h4>
               {/* </a> */}
             </div>
